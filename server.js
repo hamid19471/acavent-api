@@ -3,6 +3,13 @@ import sendOtpRoute from "./src/routes/sent-otp.route.js";
 import getOtpRoute from "./src/routes/sent-otp.route.js";
 
 const app = express();
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
