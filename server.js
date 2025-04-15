@@ -1,13 +1,13 @@
 import express from "express";
 import sendOtpRoute from "./src/routes/sent-otp.route.js";
 import getOtpRoute from "./src/routes/sent-otp.route.js";
-
+import cors from "cors";
 const app = express();
 app.use(
   cors({
     origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    methods: ["GET", "POST"],
+    credentials: false,
   })
 );
 
